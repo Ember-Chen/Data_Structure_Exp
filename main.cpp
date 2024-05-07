@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stack>
+#include <string>
 using namespace std;
 
 /**
@@ -33,15 +34,16 @@ int validBracket(string s) {
 
 int main(){
     string s;
-    cout << "请输入待检测的括号序列:... (示例: '{([[[}}]])})' )\n";
-    cin >> s;
-    int res = validBracket(s);
-    res==0?(cout<<"匹配\n"):(cout<<"此串括号匹配不合法\n");
-    if(res==1)
-        cout<<"错误原因：右括号冗余";
-    else if(res==2)
-        cout<<"错误原因：括号不成对匹配";
-    else if(res==3)
-        cout<<"错误原因：左括号冗余";
-    system("pause");
+    while(true){
+        cout << "请输入待检测的括号序列:... (示例: '{([[[}}]])})' ) (Ctrl+C退出)\n";
+        cin >> s;
+        int res = validBracket(s);
+        res==0?(cout<<"匹配\n"):(cout<<"此串括号匹配不合法\n");
+        if(res==1)
+            cout<<"错误原因：右括号冗余";
+        else if(res==2)
+            cout<<"错误原因：括号不成对匹配";
+        else if(res==3)
+            cout<<"错误原因：左括号冗余";
+    }
 }
