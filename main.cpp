@@ -12,6 +12,11 @@ int validBracket(string s) {
     stack<char> st;
     for(int i=0;i<s.length();i+=1){
         char ch = s[i];
+        if(ch!=')' && ch!=']' && ch!='}' && ch!='(' && ch!='[' && ch!='{')
+            return 4; // 错误4: 非法字符
+    }
+    for(int i=0;i<s.length();i+=1){
+        char ch = s[i];
         // 1.ch is left-bracket
         if(ch=='(')
             st.push(')');
@@ -40,10 +45,13 @@ int main(){
         int res = validBracket(s);
         res==0?(cout<<"匹配\n"):(cout<<"此串括号匹配不合法\n");
         if(res==1)
-            cout<<"错误原因：右括号冗余";
+            cout<<"错误原因：右括号冗余\n";
         else if(res==2)
-            cout<<"错误原因：括号不成对匹配";
+            cout<<"错误原因：括号不成对匹配\n";
         else if(res==3)
-            cout<<"错误原因：左括号冗余";
+            cout<<"错误原因：左括号冗余\n";
+        else if(res==4)
+            cout<<"错误原因：非法字符\n";
+        cout << "\n";
     }
 }
