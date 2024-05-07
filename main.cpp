@@ -43,4 +43,5 @@ int main(){
         cout<<"错误原因：括号不成对匹配";
     else if(res==3)
         cout<<"错误原因：左括号冗余";
+    cin.get();
 }

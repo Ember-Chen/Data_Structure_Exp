@@ -8,6 +8,8 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=GBK",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
