@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.asm": "asm-intel-x86-generic",
+    "xstring": "cpp",
+    "stack": "cpp",
+    "cstdlib": "cpp",
+    "xutility": "cpp",
+    "xiosbase": "cpp",
+    "vector": "cpp"
+  }
+}
