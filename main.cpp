@@ -36,7 +36,7 @@ int main(){
     cout << "请输入待检测的括号序列:... (示例: '{([[[}}]])})' )\n";
     cin >> s;
     int res = validBracket(s);
-    res==0?(cout<<"检测结果：匹配\n"):(cout<<"检测结果：不匹配\n");
+    res==0?(cout<<"匹配\n"):(cout<<"此串括号匹配不合法\n");
     if(res==1)
         cout<<"错误原因：右括号冗余";
     else if(res==2)
